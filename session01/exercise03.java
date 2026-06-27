@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class exercise03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Nhập vào bán kính: ");
+        System.out.printf("Nhập bán kính của hình tròn: ");
         double radius = scanner.nextDouble();
         double area = Math.PI * radius * radius;
         if (radius == 0) {
