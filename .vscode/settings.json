@@ -1,6 +1,29 @@
 {
     "java.debug.settings.vmArgs": "-Dfile.encoding=UTF-8",
-    "terminal.integrated.env.windows": {
-        "JAVA_TOOL_OPTIONS": "-Dfile.encoding=UTF-8"
+
+    "java.compiler.arguments": "-encoding UTF-8",
+    "code-runner.executorMap": {
+        "java": "cd $dir && java \"-Dfile.encoding=UTF-8\" $fileName"
+    },
+    "code-runner.runInTerminal": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": [
+                "-NoExit",
+                "-Command",
+                "$OutputEncoding = [System.Text.Encoding]::UTF8; [Console]::InputEncoding = [System.Text.Encoding]::UTF8; [Console]::OutputEncoding = [System.Text.Encoding]::UTF8"
+            ]
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [
+                "/K",
+                "chcp 65001 > nul"
+            ],
+            "icon": "terminal-cmd"
+        }
     }
 }
