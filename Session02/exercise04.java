@@ -5,26 +5,22 @@ import java.util.Scanner;
 public class exercise04 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int age = -1;
-        boolean isValid = false;
+        int age = 0;
 
-        while (!isValid) {
-            System.out.print("Nhập tuổi của bạn: ");
-            String input = scanner.nextLine().trim();
-
-            if (input.matches("\\d+")) {
-                age = Integer.parseInt(input);
-                if (age > 0) {
-                    isValid = true;
-                } else {
-                    System.out.println("Vui lòng nhập vào một số nguyên và lớn hơn 0");
+        do {
+            System.out.print("Vui lòng nhập vào tuổi của bạn: ");
+            if (scanner.hasNextInt()) {
+                age = scanner.nextInt();
+                if (age <= 0) {
+                    System.out.println("Vui lòng nhập vào một số nguyên và lớn hơn 0.");
                 }
             } else {
-                System.out.println("Vui lòng nhập vào một số nguyên và lớn hơn 0");
+                System.out.println("Vui lòng nhập vào một số nguyên và lớn hơn 0.");
+                scanner.next();
             }
-        }
+        } while (age <= 0);
 
-        System.out.println("Tuổi của bạn là " + age + " .");
+        System.out.printf("Tuổi của bạn là %d !%n", age);
 
         scanner.close();
     }
