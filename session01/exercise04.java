@@ -3,8 +3,8 @@ package Session01;
 public class exercise04 {
     public static void main(String[] args) {
         // Khai báo hai số nguyên a và b và khởi tạo các giá trị bất kỳ
-        int a = 10;
-        int b = 5;
+        int a = 15;
+        int b = 4;
 
         // Thực hiện các phép toán
         int tong = a + b;
