@@ -16,10 +16,21 @@ public class exercise01 {
             arr[i] = scanner.nextInt();
         }
 
-        // Thuật toán sắp xếp chọn (Selection Sort) theo thứ tự giảm dần
-        for (int i = 0; i < size - 1; i++) {
+        // Sắp xếp mảng bằng thuật toán sắp xếp chọn
+        selectionSort(arr);
+
+        // In kết quả
+        System.out.println("Mảng sau khi sắp xếp theo thứ tự giảm dần: " + Arrays.toString(arr));
+        System.out.println("Phần tử lớn nhất trong mảng là: " + arr[0]);
+
+        scanner.close();
+    }
+
+    public static void selectionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
             int maxIdx = i;
-            for (int j = i + 1; j < size; j++) {
+            for (int j = i + 1; j < n; j++) {
                 if (arr[j] > arr[maxIdx]) {
                     maxIdx = j;
                 }
@@ -29,11 +40,5 @@ public class exercise01 {
             arr[i] = arr[maxIdx];
             arr[maxIdx] = temp;
         }
-
-        // In kết quả
-        System.out.println("Mảng sau khi sắp xếp theo thứ tự giảm dần: " + Arrays.toString(arr));
-        System.out.println("Phần tử lớn nhất trong mảng là: " + arr[0]);
-
-        scanner.close();
     }
 }
