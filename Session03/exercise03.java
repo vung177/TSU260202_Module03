@@ -77,7 +77,6 @@ public class exercise03 {
                                 }
                             }
 
-                            // Cập nhật thống kê (chỉ chạy một lần duy nhất tại đây)
                             count++;
                             totalSalary += salary;
                             totalBonus += salary * bonusRate;
