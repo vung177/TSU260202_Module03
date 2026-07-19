@@ -83,11 +83,11 @@ public class exercise03 {
                     System.out.printf("Tổng tiền thưởng nhân viên: %s \n", totalBonus);
                     break;
                 case 4:
-                    System.out.println("Thoát chương trình");
+                    System.out.println("Thoát chương trình \n");
                     sc.close();
                     break;
                 default:
-                    System.out.println("Lựa chọn không chính xác");
+                    System.out.println("Lựa chọn không chính xác \n");
             }
             if(choice == 4){
                 break;
