@@ -9,7 +9,7 @@ public class exercise04 {
     // - Ký tự @
     // - Domain: chữ cái, chữ số, có thể chứa dấu chấm (.)
     // - TLD (đuôi miền): dài 2-6 ký tự, chỉ chứa chữ cái
-    private static final String EMAIL_REGEX = "^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\\.[a-zA-Z]{2,6}$";
+    private static final String EMAIL_REGEX = "^[a-zA-Z0-9._]+@[a-zA-Z0-9]+(\\.[a-zA-Z]{2,6})+$";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
