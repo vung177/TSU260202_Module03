@@ -8,7 +8,7 @@ public class exercise02 {
         StringBuilder sb = new StringBuilder(original);
 
         // Thao tác 1: Xóa các ký tự từ vị trí 5 đến 9 trong chuỗi (sử dụng hàm delete)
-        deleteSubstring(sb, 5, 9);
+        deleteSubstring(sb, 5, 10);
         System.out.println("Chuỗi sau khi xóa: " + sb.toString());
 
         // Thao tác 2: Thay thế đoạn "World" bằng "Universe"
