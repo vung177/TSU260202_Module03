@@ -1,4 +1,4 @@
-package Session07;
+package Session07.exercise01;
 
 import java.util.Locale;
 

@@ -1,8 +1,7 @@
-package Session07;
+package Session07.exercise01;
 
 import java.util.Scanner;
 import java.util.Locale;
-
 
 public class exercise01 {
     public static void main(String[] args) {
