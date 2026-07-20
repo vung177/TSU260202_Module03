@@ -75,6 +75,17 @@ BEGIN
 END //
 DELIMITER ;
 
+-- Thủ tục 6: search_student (Tìm sinh viên theo tên chứa fragment)
+DROP PROCEDURE IF EXISTS search_student;
+DELIMITER //
+CREATE PROCEDURE search_student(
+    IN in_name VARCHAR(100)
+)
+BEGIN
+    SELECT * FROM Students WHERE full_name LIKE CONCAT('%', in_name, '%');
+END //
+DELIMITER ;
+
 
 -- =======================================================
 -- HƯỚNG DẪN GỌI VÀ KIỂM TRA THỬ CÁC THỦ TỤC TRÊN WORKBENCH:
